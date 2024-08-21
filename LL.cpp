@@ -6,7 +6,7 @@ struct Node{
     struct Node *next;
 }*first = NULL;
 
-int display(struct Node*first){
+void display(struct Node*first){
     struct Node*q;
     q=first;
 while(q){
@@ -14,10 +14,9 @@ while(q){
     q=q->next;
     
 }
+}
 
-return 0;}
-
-int create(int a[],int size){
+void create(int a[],int size){
 struct Node *p=new Node;
 
 for(int i=0;i<size;i++)
@@ -37,22 +36,15 @@ for(int i=0;i<size;i++)
     p=t;
     }
 }
-return display(first);
+display(first);
 
 }
-
-
-
-
-//void insert(int num,struct Node *first,struct Node *p){
-
-//}
 
 int main()
 {
 int arr[]={5,6,7,8,9};
 int size=sizeof(arr)/sizeof(arr[0]);
-    cout<<create(arr,size);
+    create(arr,size);
 
     return 0;
 }
