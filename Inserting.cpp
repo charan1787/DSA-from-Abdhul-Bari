@@ -65,11 +65,6 @@ void insert(struct Node* p,int index, int x)
 
 }
 
-
-
-
-
-
 int main(){
    
    int a[]={5,6,7,8,9};
