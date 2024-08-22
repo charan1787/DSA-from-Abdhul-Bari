@@ -36,7 +36,7 @@ for(int i=0;i<size;i++)
     p=t;
     }
 }
-display(first);
+
 
 }
 
@@ -45,6 +45,7 @@ int main()
 int arr[]={5,6,7,8,9};
 int size=sizeof(arr)/sizeof(arr[0]);
     create(arr,size);
+    display(first);
 
     return 0;
 }
