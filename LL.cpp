@@ -1,4 +1,6 @@
 #include<iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 struct Node{
@@ -87,6 +89,38 @@ void max_node(struct Node *first){
 
     cout<<"Max Element : "<<max;
 }
+
+void search(struct Node *p, int key){
+while(p){
+    if(key==p->data){
+        cout<<"Key Address : "<<p;
+        return;
+    }
+    p=p->next;
+}
+}
+
+void isearch(struct Node *p,int key){
+
+    struct Node *q=new Node;
+    while(p!=NULL){
+        if(key==p->data){
+            if(p==first){
+                cout<<p;
+                break;
+            }
+        q->next=p->next;
+        p->next=first;
+        first=p;
+        cout<<p;
+        break;
+        }
+        else {
+            q=p;
+            p=p->next;
+        }
+    }
+}
 int main()
 {
 int arr[]={5,6,7,8,9};
@@ -99,5 +133,9 @@ int size=sizeof(arr)/sizeof(arr[0]);
     sum_nodes(first);
     cout<<endl;
     max_node(first);
+    cout<<endl;
+    isearch(first,5);
+    cout<<endl;
+    display(first);
     return 0;
 }
