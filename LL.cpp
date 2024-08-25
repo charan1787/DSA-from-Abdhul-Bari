@@ -1,6 +1,4 @@
 #include<iostream>
-#include <stdio.h>
-#include <stdlib.h>
 using namespace std;
 
 struct Node{
@@ -54,15 +52,14 @@ void Rdisplay(struct Node *first){
         return;
     }
 }
-
 void count_nodes(struct Node *first){
-    int c=0;
+    int count=0;
     struct Node *p = first;
     while(p){
-        c++;
+        count++;
         p=p->next;
     }
-    cout<<"Number of Nodes : "<<c;
+    cout<<"Number of Nodes : "<<count;
 }
 
 void sum_nodes(struct Node *first){
@@ -121,6 +118,9 @@ void isearch(struct Node *p,int key){
         }
     }
 }
+
+
+
 int main()
 {
 int arr[]={5,6,7,8,9};
