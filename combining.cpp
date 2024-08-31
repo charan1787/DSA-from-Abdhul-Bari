@@ -13,7 +13,7 @@ while(p){
 }
 }
 
-void create1(int a[],int size){
+void create11(int a[],int size){
 struct Node *p=new Node;
 for(int i=0;i<size;i++)
 {
@@ -105,13 +105,14 @@ else last->next=f;
 
 
 
+
 int main(){
 
     int arr1[]={77,79,81,83};
     int arr2[]={1,78,80,82,84,85};
     int size1=sizeof(arr1)/sizeof(arr1[0]);
     int size2=sizeof(arr2)/sizeof(arr2[0]);
-    create1(arr1,size1);
+    create11(arr1,size1);
     create2(arr2,size2);
     cout<<endl;
     display(first);
