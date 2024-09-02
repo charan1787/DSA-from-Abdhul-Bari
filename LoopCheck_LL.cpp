@@ -55,7 +55,7 @@ int main(){
     create(arr,size);
     cout<<endl;
     display(first);
-    t1=first->next->next;
+    t1=first->next->next->next;
     t2=first->next->next->next->next;
     t2->next=t1;
     cout<<endl;
